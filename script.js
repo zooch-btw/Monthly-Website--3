@@ -45,7 +45,7 @@ function genMiddleName(roadType, FavColor) {
 
 // Generate last name of name
 function genLastName(LastName) {
-  const lastLetter = lastName.charAt(lastName.length - 1).toLowerCase();
+  const lastLetter = LastName.charAt(LastName.length - 1).toLowerCase();
   if (lastLetter === "a") {
     return "Shadow";
   } else if (lastLetter === "e") {
