@@ -78,7 +78,7 @@ function genFullName() {
   //Generate each part of the name using helper functions
   const prefix = genPrefix(firstName);
   const newFirstName = genFirstName(firstName);
-  const genMiddleName = genMiddleName(roadType, FavColor);
+  const MiddleName = genMiddleName(roadType, FavColor);
   const newLastName = genLastName(LastName);
   const suffix = genSiffix(FavAnimal);
 }
