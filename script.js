@@ -54,7 +54,7 @@ function genLastName(LastName) {
     return "Moon";
   } else if (lastLetter === "o") {
     return "Storm";
-  } else if (lastLetter === "zi") {
+  } else if (lastLetter === "z") {
     return "Thorn";
   } else {
     return "Frost"; // default name
