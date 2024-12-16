@@ -2,5 +2,17 @@ label[for='iName'] {
 
 }
 .back {
-    background-color: cyan;
+    background: linear-gradient(blue, yellow, green, red);
+    background-size: cover; /* Make the background cover the entire viewport */ 
+    background-position: center; /* Center the image */ 
+    background-repeat: no-repeat; /* Prevent the image from repeating */ 
+    height: 100vh; /* Ensure the body takes up the full height of the viewport */ 
+    margin: 0; /* Remove default margin */ 
+}
+.liner {
+    text-align: center;
+    font-weight: bolder;
+}
+.d1 {
+    color: black;
 }

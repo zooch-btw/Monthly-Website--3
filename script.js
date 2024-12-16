@@ -28,18 +28,26 @@ function genFirstName(firstName) {
 
 //Generate middle name of name
 function genMiddleName(roadType, FavColor) {
-  if (roadType === "road") {
-    return `${FavColor}ridge`;
-  } else if (roadType === "street") {
-    return `${FavColor}son`;
-  } else if (roadType === "avenue") {
-    return `${FavColor}field`;
-  } else if (roadType === "court") {
-    return `${FavColor}view`;
-  } else if (roadType === "square") {
-    return `${FavColor}penny`;
-  } else {
-    return `${FavColor}stone`;
+  switch (roadType) {
+    case "road":
+      return `${FavColor}ridge`;
+      break;
+
+    case "street":
+      return `${FavColor}son`;
+      break;
+    case "avenue":
+      return `${FavColor}field`;
+      break;
+    case "court":
+      return `${FavColor}view`;
+      break;
+    case "square":
+      return `${FavColor}penny`;
+      break;
+    default:
+      return `${FavColor}stone`;
+      break;
   }
 }
 
@@ -54,6 +62,10 @@ function genLastName(LastName) {
     return "Moon";
   } else if (lastLetter === "o") {
     return "Storm";
+  } else if (lastLetter === "u" || lastLetter === "y") {
+    return "Night";
+  } else if (lastLetter === "s" && lastLetter === "t") {
+    return "Dawn";
   } else if (lastLetter === "z") {
     return "Thorn";
   } else {
@@ -62,29 +74,46 @@ function genLastName(LastName) {
 }
 
 // Generate suffix
-function genSiffix(FavAnimal) {
-  return `of the ${FavAnimal}`;
+function genSuffix(FavAnimal) {
+  return `Of The ${
+    FavAnimal.charAt(0).toUpperCase() + FavAnimal.slice(1).toLowerCase()
+  }`;
 }
 
 // MASTER FUNCTION TO ASSEMBLE FULL NAME
 function genFullName() {
   //Define varibales from inputs
   const firstName = document.getElementById("firstName").value.trim();
-  const LastName = document.getElementById("firstName").value.trim();
-  const roadType = document.getElementById("firstName").value;
-  const FavColor = document.getElementById("firstName").value.trim();
-  const FavAnimal = document.getElementById("firstName").value.trim();
+  const LastName = document.getElementById("LastName").value.trim();
+  const roadType = document.getElementById("roadType").value;
+  const FavColor = document.getElementById("FavColor").value.trim();
+  const FavAnimal = document
+    .getElementById("FavAnimal")
+    .value.trim()
+    .toUpperCase();
 
   //Generate each part of the name using helper functions
   const prefix = genPrefix(firstName);
   const newFirstName = genFirstName(firstName);
   const MiddleName = genMiddleName(roadType, FavColor);
   const newLastName = genLastName(LastName);
-  const suffix = genSiffix(FavAnimal);
+  const suffix = genSuffix(FavAnimal);
+
+  // functions to capitalize words
+  const Capitalizedprefix = capitalize(prefix);
+  const CapitalizedFirstName = capitalize(newFirstName);
+  const CapitalizedMiddleName = capitalize(MiddleName);
+  const CapitalizedLastName = capitalize(newLastName);
+  const Capitalizedsuffix = capitalize(suffix);
+
+  // combine all parts into the full name
+  const fullname = `${Capitalizedprefix} ${CapitalizedFirstName} ${CapitalizedMiddleName} ${CapitalizedLastName} ${Capitalizedsuffix} Clan`;
+
+  //Display result
+  document.getElementById("result").textContent = fullname;
 }
 
-// Remys work (hehe)
-function name() {
-  let image = document.getElementById("imageId");
-  image.classList.remove("d-none");
+//Capitalizer Function
+function capitalize(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 }
