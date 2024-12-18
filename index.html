@@ -30,48 +30,51 @@
                 </u>
             </div>
             <!--Info Input Form-->
-            <form id="FantasyForm" class="mb-4"">
+            <form id="FantasyForm" class="mb-4">
                 <!--First Name-->
-    <div class=" mb-3">
-                <label for="firstName" class="form-label"><b>First Name</b></label>
-                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
-        </div>
-        <!--Last Name-->
-        <div class=" mb-3">
-            <label for="LastName" class="form-label"><b>Last Name</b></label>
-            <input type="text" class="form-control" id="LastName" placeholder="Enter your last name">
-        </div>
-        <!--Get Road type-->
-        <div class=" mb-3 pt-3">
-            <label for="roadType" class="form-label"><b>Choose Road Type</b></label>
-            <select id="roadType" class="form-select">
-                <option value="road">Road</option>
-                <option value="street">Street</option>
-                <option value="avenue">Avenue</option>
-                <option value="court">Court</option>
-                <option value="square">Square</option>
-                <option value="lane">Lane</option>
-                <option value="other">Other</option>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label"><b>First Name</b></label>
+                    <b><input type="text" class="f1 form-control" id="firstName"
+                            placeholder="Enter your first name"></b>
+                </div>
+                <!--Last Name-->
+                <div class="mb-3">
+                    <label for="LastName" class="form-label"><b>Last Name</b></label>
+                    <b><input type="text" class=" f2 form-control" id="LastName" placeholder="Enter your last name"></b>
+                </div>
+                <!--Get Road type-->
+                <div class=" mb-3 pt-3">
+                    <b><label for="roadType" class="  form-label"><b>Choose Road Type</b></label>
+                        <select id="roadType" class=" f3 form-select">
+                            <option value="road">Road</option>
+                            <option value="street">Street</option>
+                            <option value="avenue">Avenue</option>
+                            <option value="court">Court</option>
+                            <option value="square">Square</option>
+                            <option value="lane">Lane</option>
+                            <option value="other">Other</option>
 
-            </select>
-        </div>
-        <!-- Fav Color-->
-        <div class=" mb-3">
-            <label for="FavColor" class="form-label"><b>Favorite Color</b></label>
-            <input type="text" class="form-control" id="FavColor" placeholder="Enter your Favorite color">
-        </div>
-        <!-- Fav Animal-->
-        <div class=" mb-3">
-            <label for="FavAnimal" class="form-label"><b>Favorite Animal</b></label>
-            <input type="text" class="form-control" id="FavAnimal" placeholder="Enter your Favorite animal">
-        </div>
-        <!--Button-->
-        <div type="submit" class="btn btn-primary w-100" onclick="genFullName()">Generate Name!</div>
+                        </select>
+                </div>
+                <!-- Fav Color-->
+                <div class=" mb-3">
+                    <label for="FavColor" class="form-label"><b>Favorite Color</b></label>
+                    <b><input type="text" class=" f4 form-control" id="FavColor"
+                            placeholder="Enter your Favorite color">
+                </div>
+                <!-- Fav Animal-->
+                <div class=" mb-3">
+                    <label for="FavAnimal" class="form-label"><b>Favorite Animal</b></label>
+                    <b><input type="text" class=" f5 form-control" id="FavAnimal"
+                            placeholder="Enter your Favorite animal">
+                </div>
+                <!--Button-->
+                <div type="submit" class=" f6 btn btn-dark w-100" onclick="genFullName()">Generate Name!</div>
 
-        <div class="liner" id="result">
+                <div class="liner" id="result">
 
-        </div>
-        </form>
+                </div>
+            </form>
         </div>
 
     </main>

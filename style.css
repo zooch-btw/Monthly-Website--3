@@ -2,7 +2,7 @@ label[for='iName'] {
 
 }
 .back {
-    background: linear-gradient(blue, yellow, green, red);
+    background: linear-gradient(rgb(193, 193, 255), rgb(255, 243, 177), rgb(225, 255, 179), rgb(255, 148, 148));
     background-size: cover; /* Make the background cover the entire viewport */ 
     background-position: center; /* Center the image */ 
     background-repeat: no-repeat; /* Prevent the image from repeating */ 
@@ -13,6 +13,32 @@ label[for='iName'] {
     text-align: center;
     font-weight: bolder;
 }
+
+/*Form colors*/
 .d1 {
     color: black;
+}
+.f1 {
+    font-size: 20px;
+    background-color: blue;
+}
+.f2 {
+    font-size: 20px;
+    background-color: red;
+}
+.f3 {
+    font-size: 20px;
+    background-color: yellow;
+}
+.f4 {
+    font-size: 20px;
+    background-color: orange;
+}
+.f5 {
+    font-size: 20px;
+    background-color: purple;
+}
+.f6 {
+    font-size: 20px;
+    background-color: rgb(9, 255, 0);
 }
